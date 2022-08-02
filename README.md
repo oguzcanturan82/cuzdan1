@@ -5,11 +5,17 @@ Random kişiler oluşturabilmek için https://randomuser.me/ apisini kullandım 
 
 ## Kurulum
 Kurulum:
+
 -git clone
+
 -Terminal ekranına 'composer install' yazıyoruz.
+
+-.env.example uzantılı dosyayı .example uzantısından kurtarıyoruz. Ve db name db username alanları kendimize göre değiştiriyoruz.
+
 -Ardından terminale 'php artisan key:generate' yaziyoruz.
-- .env.example uzantılı dosyayı .example uzantısından kurtarıyoruz. Ve db name db username alanları kendimize göre değiştiriyoruz.
+
 -Terminale 'php artisan migrate' yazıyoruz.
+
 -Son olarak 61 tane random kullanıcı için terminale 'php artisan db:seed' yazıyoruz ve 'php artisan serve' ile uygulamamızı çalıştırıyoruz.
 
 # İstenen Sorguların Ekran Görüntüleri
