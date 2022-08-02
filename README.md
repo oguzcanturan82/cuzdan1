@@ -10,9 +10,9 @@ Kurulum:
 
 -Terminal ekranına 'composer install' yazıyoruz.
 
--Ardından terminale 'php artisan key:generate' yaziyoruz.
-
 -.env.example uzantılı dosyayı .example uzantısından kurtarıyoruz. Ve db name db username alanları kendimize göre değiştiriyoruz.
+
+-Ardından terminale 'php artisan key:generate' yaziyoruz.
 
 -Terminale 'php artisan migrate' yazıyoruz.
 
