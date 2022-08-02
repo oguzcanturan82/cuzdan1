@@ -4,37 +4,49 @@ use App\Models\Calisanlar;
 
 <div class="wrapper">
     <div class="filter">
-        <select class="form-select" wire:model="byMevki">
-            <option value="">Mevki Seç \ Hepsi</option>
-            @foreach ($mevkiler as $item)
-                <option value="{{$item->mevki}}">{{$item->mevki}}</option>
-            @endforeach
-        </select>
-        <select class="form-select" wire:model="byYetkinlik">
-            <option value="">Yetkinlik Seç \ Hepsi</option>
-            @foreach ($yetkinlik as $item)
-                <option value="{{$item->yetkinlik}}">{{$item->yetkinlik}}</option>
-            @endforeach
-        </select>
-        <select class="form-select" wire:model="bySehir">
-            <option value="">Şehir Seç \ Hepsi</option>
-            @foreach ($sehir as $item)
-                <option value="{{$item->yasadigi_sehir}}">{{$item->yasadigi_sehir}}</option>
-            @endforeach
-        </select>
-        <div class="minmax">
-            <select class="form-select" wire:model="minAge">
-                <option value="">Minimum Yaş</option>
-                @for ($i = 18; $i < 28; $i++)
-                    <option value="{{$i}}">{{$i}}</option>
-                @endfor
+        <div class="d-flex f-col g5">
+            <label for="">Mevki</label>
+            <select class="form-select" wire:model="byMevki">
+                <option value="">Mevki Seç \ Hepsi</option>
+                @foreach ($mevkiler as $item)
+                    <option value="{{$item->mevki}}">{{$item->mevki}}</option>
+                @endforeach
             </select>
-            <select class="form-select" wire:model="maxAge">
-                <option value="">Maximum Yaş</option>
-                @for ($i = 18; $i < 28; $i++)
-                    <option value="{{$i}}">{{$i}}</option>
-                @endfor
+        </div>
+        <div class="d-flex f-col g5">
+            <label for="">Yetkinlik</label>
+            <select class="form-select" wire:model="byYetkinlik">
+                <option value="">Yetkinlik Seç \ Hepsi</option>
+                @foreach ($yetkinlik as $item)
+                    <option value="{{$item->yetkinlik}}">{{$item->yetkinlik}}</option>
+                @endforeach
             </select>
+        </div>
+        <div class="d-flex f-col g5">
+            <label for="">Şehir</label>
+            <select class="form-select" wire:model="bySehir">
+                <option value="">Şehir Seç \ Hepsi</option>
+                @foreach ($sehir as $item)
+                    <option value="{{$item->yasadigi_sehir}}">{{$item->yasadigi_sehir}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="d-flex f-col g5">
+            <label for="">Yaş</label>
+            <div class="minmax">
+                <select class="form-select" wire:model="minAge">
+                    <option value="">Minimum Yaş</option>
+                    @for ($i = 18; $i < 28; $i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
+                </select>
+                <select class="form-select" wire:model="maxAge">
+                    <option value="">Maximum Yaş</option>
+                    @for ($i = 18; $i < 28; $i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
+                </select>
+            </div>
         </div>
     </div>
     
